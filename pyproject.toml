@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iamlint"
+version = "1.0.0"
+description = "Offline linter for AWS IAM, S3, KMS and SQS policy JSON with a fix for each finding. No dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "TPOALOS"}]
+keywords = ["aws", "iam", "security", "policy", "linter"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/TPOALOS/iamlint"
+
+[project.scripts]
+iamlint = "iamlint:main"
+
+[tool.setuptools]
+py-modules = ["iamlint"]
